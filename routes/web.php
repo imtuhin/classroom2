@@ -18,5 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index');
+Route::get('/floor','FloorController@index');
+Route::post('/savefloor', 'FloorController@store');
+Route::get('/roomcategory','RoomCategoryController@index');
+Route::post('/saveroomcat', 'RoomCategoryController@store');
 Route::get('/room','RoomController@index');
 Route::post('/saveroom', 'RoomController@store');

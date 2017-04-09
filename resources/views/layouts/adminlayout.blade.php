@@ -129,6 +129,21 @@
         </li>
 
         <li class="treeview">
+          <a href="{{ url('/floor') }}">
+            <i class="fa fa-pie-chart"></i>
+            <span>CREATE FLOOR</span>
+          </a>
+        </li>
+
+         <li class="treeview">
+          <a href="{{ url('/roomcategory') }}">
+            <i class="fa fa-pie-chart"></i>
+            <span>ROOM TYPE</span>
+          </a>
+        </li>
+
+
+        <li class="treeview">
           <a href="{{ url('/room') }}">
             <i class="fa fa-pie-chart"></i>
             <span>ROOM NUMBER</span>
@@ -181,7 +196,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.8
     </div>
-    <strong>Copyright &copy; 2017-2018 <a href="http://jetscripts.com">JT</a>.</strong> All rights
+    <strong>Copyright &copy; 2017-2018 <a href="#">JT</a>.</strong> All rights
     reserved.
   </footer>
 

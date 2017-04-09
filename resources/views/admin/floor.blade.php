@@ -8,16 +8,16 @@
        <!-- general form elements -->
        <div class="box box-primary">
          <div class="box-header with-border">
-           <h3 class="box-title">Create Room</h3>
+           <h3 class="box-title">Create Floor</h3>
          </div>
          <!-- /.box-header -->
          <!-- form start -->
-         <form role="form" method="post" action="{{ url('/') }}/saveroom" enctype="multipart/form-data">
+         <form role="form" method="post" action="{{ url('/') }}/savefloor" enctype="multipart/form-data">
             {{csrf_field()}}
            <div class="box-body">
              <div class="form-group">
-               <label for="room_name">Room Name</label>
-               <input type="text" class="form-control" id="room_name" name="room_name" placeholder="Room Name">
+               <label for="floor_name">Floor Name</label>
+               <input type="text" class="form-control" id="floor_name" name="floor_name" placeholder="Floor Name">
              </div>
             </div>
            <!-- /.box-body -->
@@ -33,7 +33,7 @@
     <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-                <h3 class="box-title">All Room</h3>
+                <h3 class="box-title">All Floor</h3>
           </div>
               <!-- /.box-header -->
           <div class="box-body">
@@ -41,20 +41,20 @@
               <thead>
                 <tr>
                   <th>SL.</th>
-                  <th>Room Name</th>
+                  <th>Floor Name</th>
                   <!--<th>Total Employee</th>-->
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
               </thead>
                   <tbody>
-                    @foreach ($data['room'] as $row)
+                    @foreach ($data['floor'] as $row)
                      <tr>
                         <td>{{$data['sl']++}}</td>
-                        <td>{{$row->room_name}}</td>
+                        <td>{{$row->floor_name}}</td>
                     <!--<td>Internet  Explorer 4.0 </td>-->
-                        <td><a class="btn btn-warning" href="{{ url('/') }}/editroom/{{$row->room_id}}">EDIT</a></td>
-                        <td><a class="btn btn-danger" href="{{ url('/') }}/deleteroom/{{$row->room_id}}">DELETE</a></td>
+                        <td><a class="btn btn-warning" href="{{ url('/') }}/editfloor/{{$row->floor_id}}">EDIT</a></td>
+                        <td><a class="btn btn-danger" href="{{ url('/') }}/deletefloor/{{$row->floor_id}}">DELETE</a></td>
                       </tr>
                    @endforeach
                   </tbody>
